@@ -2,6 +2,10 @@
 //2Find the Largest Number in an Array Write a function that takes an array of integers and returns the largest number. Example: int findMax(const std::vector<int>& arr);
 #include <iostream>
 using namespace std;
+#include <vector>;
+
+//1)
+/*
 
 string reverseString(const string& str) {
     string reversed;
@@ -17,3 +21,26 @@ int main() {
     cout << "Reversed:" << reverseString(input) << endl;
     return 0;
 }
+*/
+//2)
+int findMax(const vector<int>& arr) {
+    int temp = arr[0];
+    for (int i=0;i<arr.size(); i++) {
+        if (arr[i] > temp) {
+            temp = arr[i];
+        }
+
+    }
+    return temp;
+
+
+}
+
+int main() {
+    vector <int> arr = {41,2,3,41,5,436,71111,8,43};
+    cout << "Largest num here is: "<<findMax(arr) << endl;
+    return 0;
+}
+
+
+
